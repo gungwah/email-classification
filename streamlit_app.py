@@ -89,8 +89,6 @@ def plot_category_distribution(df):
     st.altair_chart(chart, use_container_width=True)
 
 def main():
-    st.set_page_config(page_title="IT Ticket Classifier", layout="wide")
-    
     # Set up the page configuration
     st.set_page_config(page_title="IT Ticket Classifier", page_icon="🎫", layout="wide")
     
