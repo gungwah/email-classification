@@ -4,8 +4,6 @@ huggingface_hub
 numpy
 requests
 python-dotenv
-smtplib
-MIMEText
-MIMEMultipart
-google-generativeai 
+google-generativeai
 openai
+altair
