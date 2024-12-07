@@ -92,18 +92,18 @@ def main():
     st.set_page_config(page_title="IT Ticket Classifier", layout="wide")
     
     # Set up the page configuration
-st.set_page_config(page_title="IT Ticket Classifier", page_icon="🎫", layout="wide")
-
-# Add a banner image (replace the URL with your logo or image path)
-st.image("https://via.placeholder.com/800x150?text=Support+Ticket+Classifier", use_column_width=True)
-
-# Add a cleaner title and description
-st.title("🎫 IT Support Ticket Classifier")
-st.markdown("""
-Welcome to the **IT Support Ticket Classifier**!  
-This tool leverages advanced machine learning models to classify IT support tickets, improving efficiency and productivity.  
-Use the tabs to classify a single ticket, analyze a batch, or explore the dataset.
-""")
+    st.set_page_config(page_title="IT Ticket Classifier", page_icon="🎫", layout="wide")
+    
+    # Add a banner image (replace the URL with your logo or image path)
+    st.image("https://via.placeholder.com/800x150?text=Support+Ticket+Classifier", use_column_width=True)
+    
+    # Add a cleaner title and description
+    st.title("🎫 IT Support Ticket Classifier")
+    st.markdown("""
+    Welcome to the **IT Support Ticket Classifier**!  
+    This tool leverages advanced machine learning models to classify IT support tickets, improving efficiency and productivity.  
+    Use the tabs to classify a single ticket, analyze a batch, or explore the dataset.
+    """)
 
     
     # Sidebar configuration
