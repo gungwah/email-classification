@@ -491,9 +491,11 @@ def main():
             
             # Display accuracies
             st.subheader("Model Accuracies")
-            for model in selected_models:
-                accuracy = (results_df[model] == results_df['Actual']).mean() * 100
-                st.metric(f"{model} Accuracy", f"{accuracy:.1f}%")
+            cols = st.columns(len(selected_models))  # Create columns equal to number of models
+            for idx, model in enumerate(selected_models):
+                with cols[idx]:  # Put each model accuracy in its own column
+                    accuracy = (results_df[model] == results_df['Actual']).mean() * 100
+                    st.metric(f"{model} Accuracy", f"{accuracy:.1f}%")
 
             st.subheader("Classification Results")
             st.dataframe(results_df)
