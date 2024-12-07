@@ -298,12 +298,6 @@ def main():
             'sender_password': st.secrets['email_pass'],
             'recipient_email': 'gung.wah@81media.co.id'
         }
-
-    st.title("IT Support Ticket Classifier")
-    st.markdown("""
-    This application uses LLM models (Llama-3.2-3B and Mixtral-8x7B) to classify IT support tickets 
-    into predefined categories. Compare the performance of different models and analyze their predictions.
-    """)
     
     # Sidebar configuration
     with st.sidebar:
@@ -344,7 +338,7 @@ def main():
     )
 
     # Header
-    st.image("https://media.assettype.com/analyticsinsight%2Fimport%2Fwp-content%2Fuploads%2F2020%2F08%2FIT-TICKET-CLASSIFICATION.jpg?w=1024&auto=format%2Ccompress&fit=max", use_column_width=True)
+    st.image("https://raw.githubusercontent.com/gungwah/email-classification/refs/heads/main/IT-TICKET-CLASSIFICATION.jpg", use_column_width=True)
     st.title("🎫 IT Support Ticket Classifier")
     st.markdown("""
     Welcome to the **IT Support Ticket Classifier**!
@@ -448,8 +442,8 @@ def main():
     # Batch Analysis
     with tab2:
         st.header("Batch Analysis")
-        df = load_and_cache_data() if not uploaded_file else pd.read_csv(uploaded_file)
-
+        df = load_and_cache_data()
+        
         num_samples = st.slider("Number of tickets to analyze:", 1, 20, 5)
         
         if st.button("Start Batch Analysis"):
